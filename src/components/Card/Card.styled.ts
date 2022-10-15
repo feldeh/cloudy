@@ -6,6 +6,7 @@ const Card = styled.div`
   opacity: 0.4;
   display: flex;
   justify-content: space-between;
+  margin: 60px 15px 15px;
 `
 
 export default Card
