@@ -6,21 +6,26 @@ import TemperatureTypo from './components/Widgets/TemperatureWidget/TemperatureT
 import LocationTypo from './components/Widgets/TemperatureWidget/LocationTypo'
 import WeatherWidget from './components/Widgets/WeatherWidget/WeatherWidget'
 import WeatherTypo from './components/Widgets/WeatherWidget/WeatherTypo'
+import { Global } from '@emotion/react'
+import GlobalStyles from './components/GlobalStyles'
 
 function App() {
   return (
-    <Container>
-      <Card>
-        <TemperatureWidget>
-          <LocationTypo />
-          <TemperatureTypo />
-        </TemperatureWidget>
-        <WeatherWidget>
-          <WeatherTypo />
-        </WeatherWidget>
-      </Card>
-      <Footer />
-    </Container>
+    <>
+      <Global styles={GlobalStyles} />
+      <Container>
+        <Card>
+          <TemperatureWidget>
+            <LocationTypo />
+            <TemperatureTypo />
+          </TemperatureWidget>
+          <WeatherWidget>
+            <WeatherTypo />
+          </WeatherWidget>
+        </Card>
+        <Footer />
+      </Container>
+    </>
   )
 }
 
