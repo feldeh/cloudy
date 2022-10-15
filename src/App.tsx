@@ -1,11 +1,13 @@
-import Background from './components/Background/Background'
-import WeatherCard from './components/WeatherCard/WeatherCard'
+import Container from './components/Container/Container'
+import Card from './components/Card/Card'
+import Widget from './components/Widget/Widget'
 
 function App() {
   return (
-    <Background>
-      <WeatherCard />
-    </Background>
+    <Container>
+      <Card />
+      <Widget />
+    </Container>
   )
 }
 
