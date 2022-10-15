@@ -1,11 +1,7 @@
 import StyledWeatherTypo from './WeatherTypo.styled'
 
 const WeatherTypo = () => {
-  return (
-    <StyledWeatherTypo>
-      <p>Cloudy</p>
-    </StyledWeatherTypo>
-  )
+  return <StyledWeatherTypo>Clear skies</StyledWeatherTypo>
 }
 
 export default WeatherTypo

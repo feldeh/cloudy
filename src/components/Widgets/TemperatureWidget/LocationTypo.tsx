@@ -1,11 +1,7 @@
 import StyledLocationTypo from './LocationTypo.styled'
 
 const LocationTypo = () => {
-  return (
-    <StyledLocationTypo>
-      <p>Brussels</p>
-    </StyledLocationTypo>
-  )
+  return <StyledLocationTypo>New Zealand</StyledLocationTypo>
 }
 
 export default LocationTypo

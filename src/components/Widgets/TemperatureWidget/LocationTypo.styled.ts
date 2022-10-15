@@ -1,8 +1,9 @@
 import styled from '@emotion/styled'
 
 const StyledLocationTypo = styled.p`
-  background-color: red;
-  font-size: 1.4em;
+  //   background-color: red;
+  margin: 10px;
+  font-size: 1.2em;
   text-transform: uppercase;
   font-weight: 500;
 `
