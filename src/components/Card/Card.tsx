@@ -1,12 +1,12 @@
 import StyledCard from './Card.styled'
+import TemperatureWidget from '../Widgets/TemperatureWidget/TemperatureWidget'
 
-const Card = () => {
-  return (
-    <StyledCard>
-      <h1>Brussels</h1>
-      <h2>fff</h2>
-    </StyledCard>
-  )
+type CardProps = {
+  children: React.ReactNode
+}
+
+const Card = ({ children }: CardProps) => {
+  return <StyledCard>{children}</StyledCard>
 }
 
 export default Card

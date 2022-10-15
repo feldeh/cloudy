@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-const StyledWidget = styled.div`
+const StyledFooter = styled.div`
   color: white;
   background-color: rgb(0, 0, 255);
   opacity: 0.4;
@@ -8,7 +8,7 @@ const StyledWidget = styled.div`
   justify-content: space-between;
   border: 5px solid red;
   border-radius: 15px;
-  margin: 15px;
+  margin: 15px 15px 50px;
   padding: 15px;
 `
-export default StyledWidget
+export default StyledFooter
