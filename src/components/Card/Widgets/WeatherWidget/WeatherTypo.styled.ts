@@ -2,11 +2,11 @@ import styled from '@emotion/styled'
 
 const StyledWeatherTypo = styled.p`
   // background-color: red;
-  font-size: 1.3em;
+  font-size: calc(1.3em + 1vmin);
   font-weight: 700;
   writing-mode: vertical-rl;
   transform: scale(-1) translateX(1em);
-  margin: 10px 25px;
+  margin: 10px 20px;
 `
 
 export default StyledWeatherTypo

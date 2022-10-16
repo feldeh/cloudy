@@ -7,8 +7,10 @@ const StyledFooter = styled.div`
   justify-content: space-around;
   border: 2px solid white;
   border-radius: 15px;
-  margin: 15px 15px 50px;
+  margin: 15px auto 50px;
   padding: 15px;
+  max-width: 800px;
+  min-width: calc(120px * 3);
 
   font-size: 0.8em;
 `

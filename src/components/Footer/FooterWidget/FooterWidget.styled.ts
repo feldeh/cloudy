@@ -5,7 +5,7 @@ const StyledFooterWidget = styled.div`
   flex-direction: column;
   text-align: center;
   // background-color: red;
-  width: calc(100% / 3);
+  min-width: calc(100% / 3);
 
   p:first-of-type {
     font-weight: bold;
