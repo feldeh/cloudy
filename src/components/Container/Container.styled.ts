@@ -7,8 +7,7 @@ const StyledContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   background-image: url('src/assets/cloud.jpg');
-  // background-size: cover;
-  background-size: 250% 100%;
+  background-size: cover;
   background-position: center;
 `
 export default StyledContainer
