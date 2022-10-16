@@ -1,11 +1,21 @@
 import StyledFooter from './Footer.styled'
+import FooterWidget from './FooterWidget/FooterWidget'
 
 const Footer = () => {
   return (
     <StyledFooter>
-      <h2>Humidity</h2>
-      <h2>Visibility</h2>
-      <h2>UV</h2>
+      <FooterWidget id="footer-widget">
+        <p>78%</p>
+        <p>Humidity</p>
+      </FooterWidget>
+      <FooterWidget id="footer-widget">
+        <p>11km</p>
+        <p>Visibility</p>
+      </FooterWidget>
+      <FooterWidget>
+        <p>Low 0</p>
+        <p>UV index</p>
+      </FooterWidget>
     </StyledFooter>
   )
 }

@@ -6,6 +6,7 @@ const GlobalStyles = css`
   }
 
   :root {
+    color: white;
     font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 24px;
