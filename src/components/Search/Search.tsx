@@ -10,7 +10,7 @@ const Search = ({ onSearchChange }: any) => {
   const [search, setSearch] = useState<string | null>(null)
 
   // retrieves searchData, the data that we select from AsyncPaginate component (onChange eventlistener)
-  const handleOnChange = (searchData: string) => {
+  const handleOnChange: any = (searchData: string) => {
     setSearch(searchData)
     // pass the data the we get from the input to the function props from the parent component
     onSearchChange(searchData)
@@ -19,7 +19,7 @@ const Search = ({ onSearchChange }: any) => {
   }
 
   // loadOption will trigger when entering keys into the search bar
-  const loadOptions = (inputValue: string) => {
+  const loadOptions: any = (inputValue: string) => {
     return fetch(
       `${GEO_API_PROXY_URL}?limit=2&minPopulation=600000&namePrefix=${inputValue}`
     )
