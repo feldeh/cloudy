@@ -14,16 +14,20 @@ import { useState } from 'react'
 
 function App() {
   const [currentWeather, setCurrentWeather] = useState(null)
+  const [city, setCity] = useState(null)
 
   const handleOnSearchChange = (searchData: any) => {
     const [lat, lon] = searchData.value.split(' ')
 
     async function currentWeatherFetch() {
-      fetch(`${WEATHER_API_PROXY_URL}?lat=${lat}&lon=${lon}`)
+      fetch(`${WEATHER_API_PROXY_URL}?lat=${lat}&lon=${lon}&units=metric`)
         .then(async (response) => {
           const weatherResponse = await response.json()
 
-          setCurrentWeather({ city: searchData.label, ...weatherResponse })
+          setCurrentWeather({
+            city: searchData.label.slice(0, searchData.label.length - 4),
+            ...weatherResponse,
+          })
         })
         .catch((err) => console.log(err))
     }
@@ -40,14 +44,14 @@ function App() {
         <Search onSearchChange={handleOnSearchChange} />
         <Card>
           <TemperatureWidget>
-            <LocationTypo />
-            <TemperatureTypo />
+            {currentWeather && <LocationTypo data={currentWeather} />}
+            {currentWeather && <TemperatureTypo data={currentWeather} />}
           </TemperatureWidget>
           <WeatherWidget>
-            <WeatherTypo />
+            {currentWeather && <WeatherTypo data={currentWeather} />}
           </WeatherWidget>
         </Card>
-        <Footer />
+        {currentWeather && <Footer data={currentWeather} />}
       </Container>
     </>
   )

@@ -1,19 +1,19 @@
 import StyledFooter from './Footer.styled'
 import FooterWidget from './FooterWidget/FooterWidget'
 
-const Footer = () => {
+const Footer = ({ data }: any) => {
   return (
     <StyledFooter>
       <FooterWidget id="footer-widget">
-        <p>78%</p>
+        <p>{data.current.humidity}%</p>
         <p>Humidity</p>
       </FooterWidget>
       <FooterWidget id="footer-widget">
-        <p>11km</p>
+        <p>{data.current.visibility / 1000}km</p>
         <p>Visibility</p>
       </FooterWidget>
       <FooterWidget>
-        <p>Low 0</p>
+        <p>{data.current.uvi}</p>
         <p>UV index</p>
       </FooterWidget>
     </StyledFooter>

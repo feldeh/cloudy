@@ -1,7 +1,7 @@
 import StyledLocationTypo from './LocationTypo.styled'
 
-const LocationTypo = () => {
-  return <StyledLocationTypo>New Zealand</StyledLocationTypo>
+const LocationTypo = ({ data }: any) => {
+  return <StyledLocationTypo>{data.city}</StyledLocationTypo>
 }
 
 export default LocationTypo

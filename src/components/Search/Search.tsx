@@ -2,12 +2,17 @@ import { useState } from 'react'
 import { AsyncPaginate } from 'react-select-async-paginate'
 import { GEO_API_PROXY_URL } from '../../api'
 
+/**
+  @param onSearchChange the function which is passed from the parent component 
+ */
+
 const Search = ({ onSearchChange }: any) => {
   const [search, setSearch] = useState<string | null>(null)
 
   // retrieves searchData, the data that we select from AsyncPaginate component (onChange eventlistener)
   const handleOnChange = (searchData: string) => {
     setSearch(searchData)
+    // pass the data the we get from the input to the function props from the parent component
     onSearchChange(searchData)
     console.log('searchData')
     console.log(searchData)
@@ -39,7 +44,7 @@ const Search = ({ onSearchChange }: any) => {
   return (
     <AsyncPaginate
       placeholder="Search for a city"
-      debounceTimeout={1000}
+      debounceTimeout={600}
       value={search}
       onChange={handleOnChange}
       loadOptions={loadOptions}

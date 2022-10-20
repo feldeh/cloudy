@@ -7,6 +7,7 @@ const StyledWeatherTypo = styled.p`
   writing-mode: vertical-rl;
   transform: scale(-1) translateX(1em);
   margin: 10px 10px;
+  text-transform: uppercase;
 `
 
 export default StyledWeatherTypo
