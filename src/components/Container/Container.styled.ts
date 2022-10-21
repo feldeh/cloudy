@@ -7,7 +7,7 @@ const StyledContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-content: center;
-  background-image: url('public/cloud.svg');
+  background-image: url('/cloud.svg');
   background-size: cover;
   background-position: center;
 `
