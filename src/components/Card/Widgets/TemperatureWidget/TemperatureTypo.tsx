@@ -1,10 +1,10 @@
-import StyledTemperatureTypo from './TemperatureTypo.styled'
+import { StyledTemperatureTypo, StyledSpan } from './TemperatureTypo.styled'
 
 const TemperatureTypo = ({ data }: any) => {
   return (
     <StyledTemperatureTypo>
       {Math.trunc(data.current.temp)}
-      <span style={{ fontSize: '1em' }}>&#176;</span>
+      <StyledSpan fontSize={'1em'}>&#176;</StyledSpan>
     </StyledTemperatureTypo>
   )
 }

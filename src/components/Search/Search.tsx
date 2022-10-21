@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import { AsyncPaginate } from 'react-select-async-paginate'
 import { GEO_API_PROXY_URL } from '../../api'
+import { ICity } from '../../interfaces/interfaces'
 
-/**
-  @param onSearchChange the function which is passed from the parent component 
- */
+type SearchProps = {
+  onSearchChange: (data: {}) => void
+}
 
-const Search = ({ onSearchChange }: any) => {
-  const [search, setSearch] = useState<string | null>(null)
+const Search = ({ onSearchChange }: SearchProps) => {
+  const [search, setSearch] = useState<string>('')
 
   // retrieves searchData, the data that we select from AsyncPaginate component (onChange eventlistener)
   const handleOnChange: any = (searchData: string) => {
@@ -28,7 +29,7 @@ const Search = ({ onSearchChange }: any) => {
         console.log('response.data')
         console.log(response.data)
         return {
-          options: response.data.map((city: any) => {
+          options: response.data.map((city: ICity) => {
             console.log('city')
             console.log(city)
             return {

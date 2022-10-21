@@ -14,7 +14,6 @@ import { useState } from 'react'
 
 function App() {
   const [currentWeather, setCurrentWeather] = useState(null)
-  const [city, setCity] = useState(null)
 
   const handleOnSearchChange = (searchData: any) => {
     const [lat, lon] = searchData.value.split(' ')
