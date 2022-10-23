@@ -11,11 +11,13 @@ import GlobalStyles from './components/GlobalStyles'
 import Search from './components/Search/Search'
 import { WEATHER_API_PROXY_URL } from './api'
 import { useState } from 'react'
+import IWeatherData from './interfaces/IWeatherData'
+import { ISearchData } from './interfaces/ISearchData'
 
-function App() {
-  const [currentWeather, setCurrentWeather] = useState(null)
+const App: React.FC = () => {
+  const [currentWeather, setCurrentWeather] = useState<IWeatherData>()
 
-  const handleOnSearchChange = (searchData: any) => {
+  const handleOnSearchChange = (searchData: ISearchData) => {
     const [lat, lon] = searchData.value.split(' ')
 
     async function currentWeatherFetch() {

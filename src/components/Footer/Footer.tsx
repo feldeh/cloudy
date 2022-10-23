@@ -1,19 +1,30 @@
+import IWeatherData from '../../interfaces/IWeatherData'
 import StyledFooter from './Footer.styled'
 import FooterWidget from './FooterWidget/FooterWidget'
 
-const Footer = ({ data }: any) => {
+type FooterProps = {
+  data: IWeatherData
+}
+
+const Footer = ({ data }: FooterProps) => {
   return (
     <StyledFooter>
       <FooterWidget id="footer-widget">
-        <p>{data.current.humidity}%</p>
+        <p>
+          <>{data.current.humidity}%</>
+        </p>
         <p>Humidity</p>
       </FooterWidget>
       <FooterWidget id="footer-widget">
-        <p>{data.current.visibility / 1000}km</p>
-        <p>Visibility</p>
+        <p>
+          <>{data.current.pressure} mbar</>
+        </p>
+        <p>Pressure</p>
       </FooterWidget>
       <FooterWidget>
-        <p>{data.current.uvi}</p>
+        <p>
+          <>{data.current.uvi}</>
+        </p>
         <p>UV index</p>
       </FooterWidget>
     </StyledFooter>
