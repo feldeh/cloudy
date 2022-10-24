@@ -16,8 +16,8 @@ const StyledFooter = styled.div`
   }
   padding: 15px;
   font-size: 0.75em;
-  @media (min-width: 420px) {
-    font-size: 0.9em;
+  @media (min-width: 410px) {
+    font-size: 0.8em;
   }
   @media (min-width: 810px) {
     font-size: 1em;

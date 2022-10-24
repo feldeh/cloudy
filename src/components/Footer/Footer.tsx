@@ -9,7 +9,7 @@ type FooterProps = {
 const Footer = ({ data }: FooterProps) => {
   return (
     <StyledFooter>
-      <FooterWidget className="footer-widget">
+      <FooterWidget>
         <p>
           <>{data.current.humidity}%</>
         </p>

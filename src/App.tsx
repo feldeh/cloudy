@@ -13,6 +13,7 @@ import { WEATHER_API_PROXY_URL } from './api'
 import { useState } from 'react'
 import IWeatherData from './interfaces/IWeatherData'
 import { ISearchData } from './interfaces/ISearchData'
+import StyledSearch from './components/Search/Search.styled'
 
 const App: React.FC = () => {
   const [currentWeather, setCurrentWeather] = useState<IWeatherData>()
@@ -42,7 +43,9 @@ const App: React.FC = () => {
     <>
       <Global styles={GlobalStyles} />
       <Container>
-        <Search onSearchChange={handleOnSearchChange} />
+        <StyledSearch>
+          <Search onSearchChange={handleOnSearchChange} />
+        </StyledSearch>
         <Card>
           <TemperatureWidget>
             {currentWeather && <LocationTypo data={currentWeather} />}
