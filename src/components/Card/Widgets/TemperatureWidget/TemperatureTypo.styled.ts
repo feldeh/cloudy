@@ -8,6 +8,7 @@ export const StyledTemperatureTypo = styled.p`
   font-size: 10em;
   line-height: 1em;
   // background-color: grey;
+  margin-left: -10px;
 `
 
 export const StyledSpan = styled.span<ISpan>`

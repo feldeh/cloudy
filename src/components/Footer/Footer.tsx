@@ -9,13 +9,13 @@ type FooterProps = {
 const Footer = ({ data }: FooterProps) => {
   return (
     <StyledFooter>
-      <FooterWidget id="footer-widget">
+      <FooterWidget className="footer-widget">
         <p>
           <>{data.current.humidity}%</>
         </p>
         <p>Humidity</p>
       </FooterWidget>
-      <FooterWidget id="footer-widget">
+      <FooterWidget className="footer-widget">
         <p>
           <>{data.current.pressure} mbar</>
         </p>

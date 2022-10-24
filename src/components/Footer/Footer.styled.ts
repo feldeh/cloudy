@@ -7,11 +7,20 @@ const StyledFooter = styled.div`
   justify-content: space-around;
   border: 2px solid white;
   border-radius: 15px;
-  margin: 15px auto 50px;
+  margin: 15px 60px 50px;
+  @media (min-width: 810px) {
+    margin: 15px 150px 50px;
+  }
+  @media (min-width: 1025px) {
+    margin: 15px 320px 50px;
+  }
   padding: 15px;
-  max-width: 800px;
-  min-width: calc(120px * 3);
-
-  font-size: 0.8em;
+  font-size: 0.75em;
+  @media (min-width: 420px) {
+    font-size: 0.9em;
+  }
+  @media (min-width: 810px) {
+    font-size: 1em;
+  }
 `
 export default StyledFooter

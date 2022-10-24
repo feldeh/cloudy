@@ -11,7 +11,7 @@ const StyledFooterWidget = styled.div`
     font-weight: bold;
     font-size: 1.2em;
   }
-  #footer-widget {
+  .footer-widget {
     border-right: 1px solid rgba(255, 255, 255, 0.4);
   }
 `

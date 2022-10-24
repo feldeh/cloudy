@@ -2,13 +2,13 @@ import StyledFooterWidget from './FooterWidget.styled'
 
 type FooterWidgetProps = {
   children: React.ReactNode
-  id?: string
+  className?: string
 }
 
-const FooterWidget = ({ children, id }: FooterWidgetProps) => {
+const FooterWidget = ({ children, className }: FooterWidgetProps) => {
   return (
     <StyledFooterWidget>
-      <div id={id}>{children}</div>
+      <div className={className}>{children}</div>
     </StyledFooterWidget>
   )
 }
