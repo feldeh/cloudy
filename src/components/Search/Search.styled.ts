@@ -6,8 +6,8 @@ const StyledSearch = styled.div`
   @media (min-width: 810px) {
     margin: 10px 150px 0px;
   }
-  @media (min-width: 1025px) {
-    margin: 10px 320px 0px;
+  @media (min-width: 1200px) {
+    margin: 10px 300px 0px;
   }
 `
 export default StyledSearch
