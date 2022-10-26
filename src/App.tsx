@@ -18,7 +18,7 @@ import StyledSearch from './components/Search/Search.styled'
 const App: React.FC = () => {
   const [currentWeather, setCurrentWeather] = useState<IWeatherData>()
 
-  const [imgName, setImgName] = useState('')
+  const [imgName, setImgName] = useState<string>('')
 
   const handleOnSearchChange = (searchData: ISearchData) => {
     const [lat, lon] = searchData.value.split(' ')
@@ -64,7 +64,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     imgName !== '' &&
-      (document.body.style.background = `url(./${imgName}.jpg) no-repeat center/cover`)
+      (document.body.style.background = `url(./${imgName}.svg) no-repeat center/cover`)
   }, [imgName])
 
   console.log('currentWeather')
