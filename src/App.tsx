@@ -64,7 +64,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     imgName !== '' &&
-      (document.body.style.background = `url(./src/assets/${imgName}.jpg) no-repeat center/cover`)
+      (document.body.style.background = `url(./${imgName}.jpg) no-repeat center/cover`)
   }, [imgName])
 
   console.log('currentWeather')
