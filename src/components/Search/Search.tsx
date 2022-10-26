@@ -14,7 +14,7 @@ const Search = ({ onSearchChange }: SearchProps) => {
   // retrieves searchData, the data that we select from AsyncPaginate component (onChange eventlistener)
   const handleOnChange: (args: any) => void = (searchData: ISearchData) => {
     setSearch(searchData)
-    // pass the data the we get from the input to the function props from the parent component
+    // pass the data from the input to the function props from the parent component
     onSearchChange(searchData)
     console.log('searchData')
     console.log(searchData)
@@ -27,15 +27,13 @@ const Search = ({ onSearchChange }: SearchProps) => {
     )
       .then((response) => response.json())
       .then((response) => {
-        console.log('response.data')
-        console.log(response.data)
         return {
           options: response.data.map((city: ICity) => {
-            console.log('city')
-            console.log(city)
             return {
               value: `${city.latitude} ${city.longitude}`,
-              label: `${city.name}, ${city.countryCode}`,
+              label: `${city.name.replace(/Arrondissement of /, '')}, ${
+                city.countryCode
+              }`,
             }
           }),
         }

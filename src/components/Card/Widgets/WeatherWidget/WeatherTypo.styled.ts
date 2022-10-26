@@ -14,7 +14,7 @@ const StyledWeatherTypo = styled.p`
     transform: translateY(-8px);
   }
   @media (min-width: 1200px) {
-    font-size: 55px;
+    font-size: 45px;
     transform: translateY(-40px);
   }
   margin-top: 5px;
