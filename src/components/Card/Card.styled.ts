@@ -5,7 +5,7 @@ const Card = styled.div`
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
-  margin: -180px 60px 50px 60px;
+  margin: -180px 50px 50px 50px;
   @media (min-width: 810px) {
     margin: -180px 150px 50px 150px;
   }

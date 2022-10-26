@@ -5,7 +5,6 @@ const StyledFooterWidget = styled.div`
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  // background-color: red;
   min-width: calc(100% / 3);
   padding: 0px 5px;
 
