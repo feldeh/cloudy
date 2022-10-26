@@ -67,9 +67,6 @@ const App: React.FC = () => {
       (document.body.style.background = `url(./${imgName}.svg) no-repeat center/cover`)
   }, [imgName])
 
-  console.log('currentWeather')
-  console.log(currentWeather)
-
   return (
     <>
       <Global styles={GlobalStyles} />
