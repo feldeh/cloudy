@@ -1,4 +1,3 @@
-import IWeatherData from '../../../../interfaces/IWeatherData'
 import StyledWeatherTypo from './WeatherTypo.styled'
 
 const WeatherTypo = ({ data }: any) => {
