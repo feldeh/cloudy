@@ -15,8 +15,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "jsxImportSource": "@emotion/react",
-    "types": ["vite-plugin-svgr/client"]
+    "jsxImportSource": "@emotion/react"
   },
   "include": ["vite.config.ts", "src"],
   "references": [{ "path": "./tsconfig.node.json" }]
