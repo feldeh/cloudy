@@ -5,19 +5,18 @@ import { ICity } from '../../interfaces/ICity'
 import { ISearchData } from '../../interfaces/ISearchData'
 
 type SearchProps = {
-  onSearchChange: (data: ISearchData) => void
+  handleOnSearchChange: (data: ISearchData) => void
 }
 
-const Search = ({ onSearchChange }: SearchProps) => {
+const Search = ({ handleOnSearchChange }: SearchProps) => {
   const [search, setSearch] = useState<string | ISearchData>('')
 
   // retrieves searchData, the data that we select from AsyncPaginate component (onChange eventlistener)
   const handleOnChange: (args: any) => void = (searchData: ISearchData) => {
     setSearch(searchData)
     // pass the data from the input to the function props from the parent component
-    onSearchChange(searchData)
-    console.log('searchData')
-    console.log(searchData)
+    handleOnSearchChange(searchData)
+    console.log('searchData: ', searchData)
   }
 
   // loadOption will trigger when entering keys into the search bar

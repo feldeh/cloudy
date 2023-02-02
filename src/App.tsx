@@ -22,6 +22,7 @@ const App: React.FC = () => {
 
   const handleOnSearchChange = (searchData: ISearchData) => {
     const [lat, lon] = searchData.value.split(' ')
+    console.log(lat)
 
     async function currentWeatherFetch() {
       fetch(`${WEATHER_API_PROXY_URL}?lat=${lat}&lon=${lon}&units=metric`)
@@ -72,7 +73,7 @@ const App: React.FC = () => {
       <Global styles={GlobalStyles} />
       <Container>
         <StyledSearch>
-          <Search onSearchChange={handleOnSearchChange} />
+          <Search handleOnSearchChange={handleOnSearchChange} />
         </StyledSearch>
         <Card>
           <TemperatureWidget>
