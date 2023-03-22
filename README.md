@@ -16,4 +16,4 @@ https://cloudy-psi.vercel.app/
 ## API
 
 - [OpenWeather](https://openweathermap.org/api)
-- [GeoDB Cities](https://openweathermap.org/api)
+- [GeoDB Cities](https://rapidapi.com/wirefreethought/api/geodb-cities)
